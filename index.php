@@ -1,3 +1,8 @@
+<?php 
+require_once 'includes/config_session.inc.php';
+require_once 'includes/signup_view.inc.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,20 +21,23 @@
             <h2>Registration Form</h2>
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" >
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="text" id="email" name="email" >
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" >
             </div>
             <div class="form-group">
                 <button type="submit">Register</button>
             </div>
         </form>
+    </div>
+    <div>
+    <?php chekSignupErrors(); ?>
     </div>
 
 
